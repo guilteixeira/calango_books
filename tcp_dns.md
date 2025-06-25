@@ -37,7 +37,7 @@ A Internet é muito mais do que apenas "usar o Google" ou "acessar o TikTok". El
 
 ### 🧱 TCP (Transmission Control Protocol)
 
-- Cria conexões confiáveis (3-way handshake).
+- Cria conexões confiáveis com [3-way handshake](https://gitbook.ganeshicmc.com/redes/three-way-handshake) (SYN, SYN-ACK, ACK).
 - Garante que os dados cheguem completos e ordenados.
 
 ### ⚡UDP (User Datagram Protocol)
