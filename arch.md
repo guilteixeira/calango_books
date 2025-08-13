@@ -1,4 +1,4 @@
-# **Introdução a Arquitetura de Computadores
+# **Introdução a Arquitetura de Computadores**
 
 _Vamos tentar nos aprofundar nisso, sem nos afogar nisso?_
 
@@ -66,6 +66,7 @@ flowchart LR
 - **ROM / EPROM / Flash** → firmware.
 - **HD/SSD** → armazenamento permanente.
 - **Memória virtual** → Simula a memória em arquivos ou partições do disco (HD/SSD).
+
 ### Hierarquia de velocidade:
 
 **Cache → Memória → SSD → HD** (cada nível é mais lento e maior).
@@ -137,7 +138,7 @@ flowchart TB
 
 O espaço ou tipo de memória de um programa costuma ser dividido em regiões bem definidas, cada uma com propósito e comportamento diferentes. Buffers são apenas blocos de bytes — eles podem viver tanto na stack quanto na heap e, quando mal geridos, permitem invasões que corrompem ou manipulam dados e instruções.
 
-### **Visão Geral
+### Visão Geral
 
 **Code**  
 - Contém as instruções executáveis do programa.
@@ -215,7 +216,7 @@ endereço baixo         [0x00000000]
 - **Buffer overflows** para injetar código;
 
 ---
-## **8. Próximos assuntos
+## **8. Próximos assuntos**
 
 - Sistemas Operacionais;
 - Gerenciamento de processos e memória;
