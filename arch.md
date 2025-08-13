@@ -101,7 +101,7 @@ Conjunto de registradores internos super-rápidos (32 bits em x86):
 - EIP (ponteiro de próxima instrução)
 - EFLAGS (bandeiras de status e controle)
 
->  Alterar EIP desvia o fluxo de execução [[#Buffers e Overflows (transbordamento)]] e forjar EAX muda valores de retorno.
+>  Alterar EIP desvia o fluxo de execução causando [overflows](#buffers-e-overflows-transbordamento) e forjar EAX muda valores de retorno.
 
 **Cache Interna**
 - Níveis L1, L2, L3 interligados diretamente à ALU e registradores para minimizar latência.
@@ -114,7 +114,7 @@ Conjunto de registradores internos super-rápidos (32 bits em x86):
 
 **Threads e Instruções**
 - **Threads** alternam contextos de registradores e EIP/EFLAGS, permitindo multitarefa e expondo vetores de ataque em _context switch_.
-- **Pipeline** e execução fora de ordem introduzem pontos de contensão exploráveis em [[#Spectre / Meltdown]].
+- **Pipeline** e execução fora de ordem introduzem pontos de contensão exploráveis em [Spectre e Meltdown](#spectre--meltdown).
 
 ### Diagrama de layout da CPU
 
@@ -151,7 +151,7 @@ O espaço ou tipo de memória de um programa costuma ser dividido em regiões be
 **Buffers**  
 - Blocos de memória (arrays, cadeias de caracteres, etc.) usados para agrupar dados temporários. Podem existir tanto na stack (buffers locais) quanto na heap (buffers dinâmicos).
 
-> Em alguns sistemas, heap pode crescer “para baixo” ou ser gerenciado por [[#Top-of-Heap (topo da memória heap)]], não há padronização absoluta.
+> Em alguns sistemas, heap pode crescer “para baixo” ou ser gerenciado por [Top-of-Heap](#top-of-heap-topo-da-memória-heap), não há padronização absoluta.
 
 ###  Layout geral da memória:
 
@@ -167,8 +167,7 @@ O espaço ou tipo de memória de um programa costuma ser dividido em regiões be
 - Metadata (tamanho, ponteiros internos) fica armazenada antes ou depois de cada bloco.
 - Cresce em direção ao espaço livre acima de data segment.
 
-> Heap Overflow e [[#Use-After-Free]] permitem corromper essa metadata, levando à execução de código arbitrário via [[#Hijacking (sequestro de controle)]] de ponteiros.
-
+> Heap Overflow e [Use After Free](#use-after-free) permitem corromper essa metadata, levando à execução de código arbitrário via [Hijacking](#hijacking-sequestro-de-controle) de ponteiros.
 
 ```
 endereço alto          [0xFFFFFFFF]
@@ -215,10 +214,3 @@ endereço baixo         [0x00000000]
 - **Manipulação de registradores** para desviar execução;
 - **Buffer overflows** para injetar código;
 
----
-## **8. Próximos assuntos**
-
-- Sistemas Operacionais;
-- Gerenciamento de processos e memória;
-- Syscalls e permissões;
-- Programação e algoritmos.
