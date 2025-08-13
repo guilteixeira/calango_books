@@ -167,7 +167,7 @@ O espaço ou tipo de memória de um programa costuma ser dividido em regiões be
 - Metadata (tamanho, ponteiros internos) fica armazenada antes ou depois de cada bloco.
 - Cresce em direção ao espaço livre acima de data segment.
 
-> Heap Overflow e [Use After Free](#use-after-free) permitem corromper essa metadata, levando à execução de código arbitrário via [Hijacking](#hijacking-sequestro-de-controle) de ponteiros.
+> [Heap Overflow](#buffers-e-overflows-transbordamento) e [Use After Free](#use-after-free) permitem corromper essa metadata, levando à execução de código arbitrário via [Hijacking](#hijacking-sequestro-de-controle) de ponteiros.
 
 ```
 endereço alto          [0xFFFFFFFF]
