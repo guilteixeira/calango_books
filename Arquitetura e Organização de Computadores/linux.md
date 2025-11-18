@@ -30,7 +30,7 @@ O “sistema Linux” que usamos no dia a dia combina o kernel com utilitários,
 
 - **Interface com o usuário**:
   - **Shell**: interface de linha de comando (bash, zsh).
-  - **Interface gráfica**: sistemas de janelas (X11, Wayland), gerenciadores de desktop (GNOME, KDE).
+  - **Interface gráfica**: Servidores gráficos (X11 ou Xorg, Wayland), ambientes desktop aka desktop environment (GNOME, KDE).
 
 - **Utilitários**: pequenos programas que realizam funções básicas — calculadora, editor de texto, controladores de rede, ferramentas de sistema.
 - **Bibliotecas e APIs**: camadas que simplificam a vida do programador. Exemplo: a biblioteca C (`glibc`) implementa funções como `printf()`, que no fundo se conecta a **syscalls**.
